@@ -1,0 +1,22 @@
+export const PRIORITY_COLORS = {
+  low: { bg: 'bg-gray-100', text: 'text-gray-600', label: 'Low' },
+  medium: { bg: 'bg-blue-100', text: 'text-blue-700', label: 'Medium' },
+  high: { bg: 'bg-orange-100', text: 'text-orange-700', label: 'High' },
+  urgent: { bg: 'bg-red-100', text: 'text-red-700', label: 'Urgent' },
+};
+
+// YENİ: Tarih formatlayıcı (Örn: "10 Oca")
+export const formatDate = (dateString) => {
+  if (!dateString) return null;
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'short' }).format(date);
+};
+
+// YENİ: Günü geçmiş mi kontrolü
+export const isOverdue = (dateString, status) => {
+  if (!dateString || status === 'DONE') return false; // Biten işin günü geçmez
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Saati sıfırla, sadece güne bak
+  const dueDate = new Date(dateString);
+  return dueDate < today;
+};
