@@ -1,16 +1,49 @@
-# React + Vite
+# SimpleTaskFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimalist, Notion-style Kanban board application built with React and Tailwind CSS. This project focuses on a clean user experience (UX) and efficient state management.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Drag & Drop Interface:** Smooth drag-and-drop functionality powered by `@dnd-kit`.
+- **Persistent State:** Uses `Zustand` with local storage persistence to keep data safe after page reloads.
+- **Smart Task Management:**
+  - **Inline Creation:** Add tasks quickly without annoying pop-ups.
+  - **Rich Metadata:** Set priorities (Low, Medium, High, Urgent) and Due Dates.
+  - **Overdue Detection:** Visual indicators for missed deadlines.
+- **View Management:** Switch between Board View and Settings.
+- **Workspace Customization:** Dynamic workspace naming and "Danger Zone" to reset data.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Core:** React 19, Vite
+- **Styling:** Tailwind CSS
+- **State Management:** Zustand (w/ Middleware)
+- **DnD Engine:** @dnd-kit (Core, Sortable, Utilities)
+- **Icons:** Lucide React
+- **Utils:** uuid, clsx, tailwind-merge
 
-## Expanding the ESLint configuration
+## ⚙️ Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository**
+   git clone [https://github.com/KULLANICI_ADIN/SimpleProjectManagementProgramme.git](https://github.com/viranora/SimpleTaskFlow.git)
+   cd SimpleTaskFlow
+Install dependencies
+
+npm install
+Run the development server
+
+npm run dev
+## 📂 Project Structure
+src/
+├── components/
+│   ├── Board.jsx       # Main Kanban logic & DragContext
+│   ├── TaskCard.jsx    # Individual task item (Draggable)
+│   ├── TaskModal.jsx   # Detailed edit view
+│   ├── Sidebar.jsx     # Navigation & Workspace info
+│   ├── Settings.jsx    # App configuration
+│   └── InlineInput.jsx # Quick add feature
+├── store.js            # Global state (Zustand)
+├── utils.js            # Helper functions (Dates, Colors)
+└── App.jsx             # Root layout
+
+### by Sema
