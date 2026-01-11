@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Trash2, Flag, Calendar } from 'lucide-react'; // Calendar ikonu eklendi
+import { X, Trash2, Flag, Calendar } from 'lucide-react'; 
 import { useStore } from '../store';
 import { PRIORITY_COLORS } from '../utils';
 
@@ -13,7 +13,7 @@ export default function TaskModal({ task, onClose }) {
   const [dueDate, setDueDate] = useState(task.dueDate || ''); // Tarih state'i
 
   const handleSave = () => {
-    updateTask(task.id, title, description, priority, dueDate); // Tarihi de gönder
+    updateTask(task.id, title, description, priority, dueDate); 
     onClose();
   };
 
