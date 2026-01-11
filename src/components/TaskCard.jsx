@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { Clock } from 'lucide-react'; // Saat ikonu
-import { PRIORITY_COLORS, formatDate, isOverdue } from '../utils'; // Helperları import et
+import { Clock } from 'lucide-react'; 
+import { PRIORITY_COLORS, formatDate, isOverdue } from '../utils'; 
 
 export default function TaskCard({ task }) {
   const {
@@ -47,7 +47,7 @@ export default function TaskCard({ task }) {
         {task.title}
       </p>
       
-      {/* Alt Kısım: Tarih (Varsa göster) */}
+      {/* Alt Kısım: Tarih */}
       {formattedDate && (
         <div className={`flex items-center gap-1 text-[11px] font-medium mt-1 ${overdue ? 'text-red-600' : 'text-gray-400'}`}>
           <Clock size={12} />
