@@ -14,7 +14,7 @@ import {
 import { useStore } from '../store';
 import TaskCard from './TaskCard';
 import TaskModal from './TaskModal';
-import InlineInput from './InlineInput'; // <--- YENİ BİLEŞEN
+import InlineInput from './InlineInput'; 
 import { Plus } from 'lucide-react';
 
 const COLUMNS = [
