@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import Board from './components/Board';
-import Settings from './components/Settings'; // Yeni import
+import Settings from './components/Settings'; 
 import { useStore } from './store';
 
 function App() {
