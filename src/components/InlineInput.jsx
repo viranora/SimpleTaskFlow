@@ -24,8 +24,7 @@ export default function InlineInput({ onSubmit, onCancel }) {
           if (e.key === 'Escape') onCancel();
         }}
         onBlur={() => {
-            // İstersen dışarı tıklayınca iptal etsin, istersen kaydetsin.
-            // Şimdilik kullanıcıyı zorlamamak için burayı boş bırakıyorum.
+          
         }}
       />
       <div className="flex justify-end gap-2 mt-2">
