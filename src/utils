@@ -5,14 +5,12 @@ export const PRIORITY_COLORS = {
   urgent: { bg: 'bg-red-100', text: 'text-red-700', label: 'Urgent' },
 };
 
-// YENİ: Tarih formatlayıcı (Örn: "10 Oca")
 export const formatDate = (dateString) => {
   if (!dateString) return null;
   const date = new Date(dateString);
   return new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'short' }).format(date);
 };
 
-// YENİ: Günü geçmiş mi kontrolü
 export const isOverdue = (dateString, status) => {
   if (!dateString || status === 'DONE') return false; // Biten işin günü geçmez
   const today = new Date();
